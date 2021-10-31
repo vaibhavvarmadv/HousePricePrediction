@@ -1,3 +1,2 @@
 streamlit
-pickleshare==0.7.5
-sklearn==0.23.2
+sklearn
