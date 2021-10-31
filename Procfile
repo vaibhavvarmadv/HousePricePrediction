@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run streamlitapi_project.py
+web: sh setup.sh && streamlit run main.py
