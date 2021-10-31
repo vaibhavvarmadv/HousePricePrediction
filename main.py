@@ -1,5 +1,6 @@
 # Importing Pickle and streamlit
 import pickle
+from sklearn.linear_model import LinearRegression
 import streamlit as st
 
 # opening the pickle file and loading it.
