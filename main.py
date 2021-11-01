@@ -32,12 +32,13 @@ def house_price_pred():
         waterfront = 1
     elif waterfront.lower() == 'no':
         waterfront = 0
+    # using the model to predict the house price and round it out 
+    output = pickle_model.predict([[waterfront, bathrooms, sqft_living, grade, yr_built,view,sqft_living15]])
+    house_price =  round(output[0], 2)
     
+    # using a button to output the price
     if st.button("Find"):
-        output = pickle_model.predict([[waterfront, bathrooms, sqft_living, grade, yr_built,view,sqft_living15]])
-        house_price =  round(output[0], 2)
-        st.success(f"Hello {name} !, the expected price of the house with the above specification is $ {house_price}")
-        
+        st.success(f"Hello {name} !, the expected price of the house with the above specification is $ {house_price}")        
 
 if __name__ == "__main__":
     house_price_pred()
