@@ -13,11 +13,11 @@ def house_price_pred():
     st.title("House Price Prediction")
     # inputs are being fetched from the user
     name = st.text_input('Name ', '')
-    sqft_living = st.text_input('Square Ft Living ', '')
-    sqft_living15 = st.text_input('Nearest 15 Square Ft Living', '')
-    grade = st.number_input("Grade of the House(1-13 Scale)",0,13)
-    yr_built = st.text_input('Year Built ', '')
-    bathrooms = st.text_input('No of bathrooms', '') 
+    sqft_living = st.number_input('Square Ft Living ',0,10000)
+    sqft_living15 = st.number_input('Nearest 15 Square Ft Living', 0,100000)
+    grade = st.number_input("Grade of the House(1-13 Scale)",1,13)
+    yr_built = st.number_input('Year Built ', 1950,2021)
+    bathrooms = st.number_input('No of bathrooms',0,10) 
     view = st.selectbox("View",('Yes', 'No'))
     waterfront = st.selectbox("Waterfront",('Yes', 'No'))
     
